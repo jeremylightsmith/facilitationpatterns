@@ -1,0 +1,21 @@
+category: safety
+story:
+  "\"On a scale of 1 to 10, how safe do you feel in this room?\""
+summary: To get a quick feeling of where a group is individually or as a whole, take their temperature.  Use [on_a_scale_of] to quantify this temperature.
+details:
+  Variations - anonymously
+  
+  Ideas on what types of things might be a good fit for a temperature - safety, level of confidence, happiness on a project, emotions, etc.
+    
+  Often you might want especially high or low numbers to talk about why if they are comfortable.  If not, encourage them to talk to you in private.
+  
+  When employing this pattern in a group, you have a lot of choice over what to do with the data.  Here are some choices.
+  
+  * _allow people to verbalize it_
+  * _average it to get a group temperature_ - then write it on the wall
+  * _graph all the temperatures_ - a histogram
+  * _kinesthetic graphing_ - like graphing the temperatures on the wall, but have some of the people move the other people so that they are physically grouped.  this gives the group a better understanding of who is where
+  * _graph the group temperature over time_
+  .  You can allow people to simply state where tehy Some things people do are let people say it, average it to get a group temperature
+credits: 
+  Edree Allen told me about Kinesthetic graphing

@@ -1,0 +1,24 @@
+% helper :application
+
+h1. What is Facilitation?
+
+Facilitation comes from the latin _facile_, which mean _easy_.  In fact, the role of a facilitator in a group setting is to "make things easy".  It involves planning, organizing, and setting or supporting rules and goals within such groups.  It is my goal here to collect and share many of the tricks, techniques and practices that facilitators use in their work.
+
+h1. Facilitation Patterns
+
+% patterns_by_category.each do |category, patterns|
+h3. <%= category.titleize %>
+
+% patterns.each do |pattern|
+%   if pattern.summary.blank?
+* [<%= pattern.symbol %>]
+%   else
+* [<%= pattern.symbol %>] - <%= limit_words_to(pattern.summary, 30) %>
+%   end
+% end  
+
+% end
+
+----
+
+what about games?  modeling?

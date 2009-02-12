@@ -1,0 +1,18 @@
+check out how rails recipes does credits
+credit formula to fearless change
+what is a pattern
+
+pattern format current:
+  - story
+  - summary
+  - todo
+  - problem
+  - answer
+  - details
+  - credits
+  
+ideas:
+  - example - the words you actually say
+  - variations
+  - antipattern
+  - dont forget to...
