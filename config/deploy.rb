@@ -1,10 +1,10 @@
-set :application, "facilitation_patterns"
+set :application, "facilitationpatterns"
 set :user, "stellsmi"
 set :home, "/users/home/stellsmi"
 set :deploy_to, "#{home}/apps/#{application}"
 
 set :scm, :git
-set :repository, "git://github.com/jeremylightsmith/blog.git "
+set :repository, "git://github.com/jeremylightsmith/#{application}.git "
 set :branch, "master"
 set :deploy_via, :remote_cache
 
