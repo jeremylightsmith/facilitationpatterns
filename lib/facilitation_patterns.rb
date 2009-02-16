@@ -1,6 +1,11 @@
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../../actionsite/lib")
 
+begin
+  require 'rubygems'
+  gem 'jeremylightsmith-actionsite', '>= 0.4'
+rescue Exception
+  $: << File.dirname(__FILE__) + "/../../actionsite/lib"
+end
 require 'action_site'
 
 require 'pattern'

@@ -36,7 +36,7 @@ end
 
 desc "test links"
 task "test:links" do
-  links = ActionSite::LinkChecker.new
+  links = ActionSite::AsyncLinkChecker.new
   links.check("http://localhost/facilitation_patterns/")
 end
 

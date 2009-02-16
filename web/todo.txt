@@ -12,6 +12,12 @@ pattern format current:
   - credits
   
 ideas:
+  - summary 
+    - the world is this way.  so do this
+    - people can only handle 3 things at a time, so structure everything in 3's
+        or
+    - the world is this way.  doing this allows these things to happen
+    - meetings tend to wander w/o an agenda.  putting it on the wall allows ...
   - example - the words you actually say
   - variations
   - antipattern
