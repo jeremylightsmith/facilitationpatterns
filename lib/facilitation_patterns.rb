@@ -2,7 +2,7 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
 
 begin
   require 'rubygems'
-  gem 'jeremylightsmith-actionsite', '>= 0.4'
+  gem 'jeremylightsmith-actionsite', '>= 0.6.2'
 rescue Exception
   $: << File.dirname(__FILE__) + "/../../actionsite/lib"
 end

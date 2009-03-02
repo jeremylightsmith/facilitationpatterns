@@ -11,37 +11,38 @@ Spec::Rake::SpecTask.new(:spec) do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
 end
 
-desc "generate the site"
-task :generate do
-  Dir.chdir(File.dirname(__FILE__)) do
-    site = ActionSite::Site.new("web", "public")
-    
-    site.generators["pattern"] = Generators::PatternGenerator.new
-    site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
-    
-    site.context.patterns = Patterns.load("web")
-    site.context.patterns_by_category = {}
-    site.context.patterns.each do |pattern|
-      (site.context.patterns_by_category[pattern.category] ||= []) << pattern
-    end
-    
-    site.generate
+def new_site
+  site = ActionSite::Site.new(File.dirname(__FILE__) + "/web", File.dirname(__FILE__) + "/public")
+  
+  site.generators["pattern"] = Generators::PatternGenerator.new
+  site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
+  
+  site.context.patterns = Patterns.load("web")
+  site.context.patterns_by_category = {}
+  site.context.patterns.each do |pattern|
+    (site.context.patterns_by_category[pattern.category] ||= []) << pattern
   end
+  
+  site
 end
 
-desc "open the site"
-task :open do
-  `open public/index.html`
+desc "generate the site"
+task :generate do
+  new_site.generate
+end
+
+desc "start serving the site on http://localhost:3000/"
+task :start do
+  new_site.serve
 end
 
 desc "test links"
 task "test:links" do
-  links = ActionSite::AsyncLinkChecker.new
-  links.check("http://localhost/facilitation_patterns/")
-end
+  server = Thread.new(new_site) {|site| site.serve(3334)}
+  sleep 1
 
-desc "test local links"
-task "test:local_links" do
-  links = ActionSite::LinkChecker.new(:local => true)
-  links.check("http://localhost/facilitation_patterns/")
+  links = ActionSite::AsyncLinkChecker.new
+  links.check("http://localhost:3334/")
+  
+  server.kill
 end
