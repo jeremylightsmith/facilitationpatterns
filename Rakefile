@@ -12,12 +12,12 @@ Spec::Rake::SpecTask.new(:spec) do |t|
 end
 
 def new_site
-  site = ActionSite::Site.new(File.dirname(__FILE__) + "/web", File.dirname(__FILE__) + "/public")
+  site = ActionSite::Site.new("web", "public")
   
   site.generators["pattern"] = Generators::PatternGenerator.new
   site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
   
-  site.context.patterns = Patterns.load("web")
+  site.context.patterns = Patterns.load("config/categories.yml", "web")
   site.context.patterns_by_category = {}
   site.context.patterns.each do |pattern|
     (site.context.patterns_by_category[pattern.category] ||= []) << pattern
@@ -31,9 +31,9 @@ task :generate do
   new_site.generate
 end
 
-desc "start serving the site on http://localhost:3000/"
+desc "start serving the site on http://localhost:4444/"
 task :start do
-  new_site.serve
+  new_site.serve(4444)
 end
 
 desc "test links"
