@@ -22,3 +22,6 @@ ideas:
   - variations
   - antipattern
   - dont forget to...
+  
+patterns file could relate order
+show new sections of patterns
