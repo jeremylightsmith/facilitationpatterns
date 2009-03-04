@@ -1,12 +1,21 @@
-category: organizational
-summary:
-  Meetings tend to wander unless there is an agenda.  Putting it on the wall allows everyone to take ownership of it and of keeping the meeting on track. 
-details: 
-  Chris Simms has an excel template that looks like this-
-  |agenda item|goal|technique|how long|start time|
-  ||||||
-  ||||||
+<summary>
+Meetings tend to wander unless there is an agenda.  Putting it on the wall allows everyone to take ownership of it and of keeping the meeting on track. 
+</summary>
+<example></example>
+<details>
+Chris Simms has an excel template that looks like this-
+|agenda item|goal|technique|how long|start time|
+||||||
+||||||
   
-  It calculates start time.  He notices that he works with "how long" in planning, but in the meeting, he works with "start time"
-  
-  variations - print out, project on wall, allow users to arrange on big paper that you've organized'
+It calculates start time.  He notices that he works with "how long" in planning, but in the meeting, he works with "start time"
+</details>
+<variation>
+print out, project on wall, allow users to arrange on big paper that you've organized'
+</variation>
+<dont_forget></dont_forget>
+<problem></problem>
+<answer></answer>
+<credits></credits>
+<todo></todo>
+<story></story>

@@ -1,10 +1,11 @@
-Organizational:
+---
+- Organizational:
   - facilitator writes
   - participants write
   - three things
   - visible agenda
 
-Discussion:
+- Discussion:
   - break into groups
   - direct group authority
   - fishbowl
@@ -16,8 +17,9 @@ Discussion:
   - talking stick
   - use cards
   - use gestures
+  - define your role
   
-Language:
+- Language:
   - ask questions with answers
   - I language
   - I see I feel I imagine
@@ -27,31 +29,31 @@ Language:
   - we language
   - what are you going to do about that
 
-Cards:
+- Cards:
   - business process modeling
   - mind map
   - moving parts architecture
   - stack
   
-Time Keeping:
+- Time Keeping:
   - ask to extend
   - time box
   - time keeper
   - time stickies
   
-Understanding:
+- Understanding:
   - one thing
   - rephrase
   - say little
   
-State of Mind:
+- State of Mind:
   - I trust you
   - no attachments
   - no personal agenda
   - people hear what they need to
   - put your distractions on the shelf
   
-Safety:
+- Safety:
   - lower my status
   - make mistakes
   - play a game

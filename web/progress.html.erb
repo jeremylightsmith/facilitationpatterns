@@ -21,7 +21,7 @@
     <th>Credits</th>
     <th>Todo</th>
   </tr>
-% patterns_by_category.each do |category, patterns|
+% patterns.by_category.each do |category, patterns|
 % patterns.each do |pattern|
   <tr>
     <td><a href="<%= pattern.symbol %>.html"><%= pattern.name %></a></td>

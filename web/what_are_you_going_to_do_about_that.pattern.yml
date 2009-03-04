@@ -1,4 +1,11 @@
-name: "\"What are you going to do about that?\""
-category: language
-summary:
-  A great question to ask.
+<name>"What are you going to do about that?"</name>
+<summary>A great question to ask.</summary>
+<example></example>
+<details></details>
+<variation></variation>
+<dont_forget></dont_forget>
+<problem></problem>
+<answer></answer>
+<credits></credits>
+<todo></todo>
+<story></story>

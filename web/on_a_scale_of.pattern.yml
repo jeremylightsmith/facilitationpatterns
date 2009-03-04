@@ -1,6 +1,17 @@
-name: "\"On a scale of...\""
-category: language
-summary:
-  "Asking for answers on a discrete scale allows you to quantify, measure and even graph things that we often think of as intangible and hard to pin down.  e.g. \"On a scale of 1 to 5, how happy are you in this project?\""
-details: 
-  This pattern is used in [temperature].  
+<name>"On a scale of ..."</name>
+<summary>
+Asking for answers on a discrete scale allows you to quantify, measure and even graph things that we often think of as intangible and hard to pin down.
+</summary>
+<example>
+e.g. "On a scale of 1 to 5, how happy are you in this project?"
+</example>
+<details>
+This pattern is used in [temperature].  
+</details>
+<variation></variation>
+<dont_forget></dont_forget>
+<problem></problem>
+<answer></answer>
+<credits></credits>
+<todo></todo>
+<story></story>

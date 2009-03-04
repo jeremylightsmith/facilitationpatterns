@@ -1,20 +1,6 @@
 class Pattern
-  MANDATORY_ATTRIBUTES = %w(category)
-  OPTIONAL_ATTRIBUTES = %w(name story summary problem answer details credits todo)
-  
   def initialize(symbol, options)
-    options = {} if !options
-    actual = options.keys.map {|k| k.to_s}
-    missing = MANDATORY_ATTRIBUTES - actual
-    unknown = actual - (MANDATORY_ATTRIBUTES + OPTIONAL_ATTRIBUTES)
-    raise "missing options #{missing.inspect} reading #{symbol}" unless missing.empty?
-    raise "unknown options #{unknown.inspect} reading #{symbol}" unless unknown.empty?
-
-    @options = {}
-    options.each do |n,v| 
-      v = v.gsub("\n", "\n\n") if v.respond_to?(:gsub)
-      @options[n.to_sym] = v
-    end
+    @options = (options || {}).map {|key, value| [key.to_sym, value]}.to_hash
     @options[:symbol] ||= symbol
     @options[:name] ||= symbol.to_s.titleize
   end

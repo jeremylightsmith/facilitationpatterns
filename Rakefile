@@ -17,12 +17,7 @@ def new_site
   site.generators["pattern"] = Generators::PatternGenerator.new
   site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
   
-  site.context.patterns = Patterns.load("config/categories.yml", "web")
-  site.context.patterns_by_category = {}
-  site.context.patterns.each do |pattern|
-    (site.context.patterns_by_category[pattern.category] ||= []) << pattern
-  end
-  
+  site.context.patterns = Patterns.new("config/categories.yml", "web").reload
   site
 end
 
@@ -33,7 +28,10 @@ end
 
 desc "start serving the site on http://localhost:4444/"
 task :start do
-  new_site.serve(4444)
+  site = new_site
+  site.serve(4444) do |path|
+    site.context.patterns.reload
+  end
 end
 
 desc "test links"
