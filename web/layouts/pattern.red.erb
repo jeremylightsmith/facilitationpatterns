@@ -11,14 +11,21 @@ p(feedback). "tell me about this pattern":mailto:jeremy.lightsmith@gmail.com?sub
 
 </div>
 
+% if pattern.example?
+<div class="example">
+
+<%= pattern.example %>
+  
+</div>
+% end
+
 <div class="summary">
 
 <%= pattern.summary %>
 
-
 </div>
 
-% unless pattern.todo.blank?
+% if pattern.todo?
 <div class="todo">
 
 <%= pattern.todo %>
@@ -31,7 +38,7 @@ p(feedback). "tell me about this pattern":mailto:jeremy.lightsmith@gmail.com?sub
 <%= pattern.problem %>
 
 </div>
-% unless pattern.answer.blank?
+% if pattern.answer?
 
 <div class="therefore">Therefore:</div>
 
@@ -48,9 +55,17 @@ p(feedback). "tell me about this pattern":mailto:jeremy.lightsmith@gmail.com?sub
 
 </div>
 
+% if pattern.variation?
+<div class="variation">
+<h3>Variations</h3>
+
+<%= pattern.variation %>
+
+</div>
+% end
 % unless pattern.credits.blank?
-<div class="credit_label">Credit to:</div>
 <div class="credits">
+<h3>Credit to</h3>
 
 <%= pattern.credits %>
 

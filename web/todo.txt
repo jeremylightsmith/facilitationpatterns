@@ -1,5 +1,6 @@
 check out how rails recipes does credits
 credit formula to fearless change
+credit 
 what is a pattern
 
 pattern format current:

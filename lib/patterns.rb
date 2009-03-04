@@ -69,6 +69,9 @@ class Patterns
       end
     end
     hash
+  rescue 
+    puts "Error parsing #{load_file(@categories_file).inspect}" rescue
+    raise
   end
   
   def lookup_pattern_files_by_pattern_name

@@ -2,6 +2,10 @@ a.pattern_link {
   font-weight: bold;
 }
 
+.pattern h3 {
+  margin-bottom: 0;
+  font-size: 13px;
+}
 span.unknown_pattern_link {
   font-weight: bold;
   text-decoration: underline;
@@ -27,6 +31,12 @@ span.unknown_pattern_link {
 .pattern .story {
   font-style: italic;
   padding-bottom: 1em;
+}
+
+.pattern .example {
+  color: #999;
+  font-style: italic;
+  padding: 0.5em 2em;
 }
 
 .pattern .summary {

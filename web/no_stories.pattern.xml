@@ -1,0 +1,18 @@
+<summary>
+Meetings are slowed down when participants tell stories _about_ their points instead of just relating their points directly.  To keep this from happening, add "No Stories" to your [ground_rules].
+</summary>
+<example>
+Jerry - "I know this because once, when I first got offered..."
+Linda - "No stories!"
+</example>
+<details></details>
+<variation>Thoughtworks uses cups...</variation>
+<dont_forget></dont_forget>
+<problem></problem>
+<answer></answer>
+<credits>
+"No stories" - comes from Landmark Forum via Andrew Sutton
+cups comes from ThoughtWorks via Jeff Patton
+</credits>
+<todo>Learn more about cups</todo>
+<story></story>

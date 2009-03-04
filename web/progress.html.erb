@@ -9,24 +9,23 @@
   .fail { background-color: #fdd;}
   .attention { background-color: #ee6;}
 </style>
+
+% columns = %w(name category summary example details variation dont_forget problem answer credits story todo)
 <table>
   <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Story</th>
-    <th>Summary</th>
-    <th>Problem</th>
-    <th>Answer</th>
-    <th>Details</th>
-    <th>Credits</th>
-    <th>Todo</th>
+    <th>#</th>
+    <% columns.each do |c| %>
+      <th><%= c.titleize %></th>
+    <% end %>
   </tr>
+  
 % patterns.by_category.each do |category, patterns|
-% patterns.each do |pattern|
+% patterns.each_with_index do |pattern, i|
   <tr>
+    <td><%= i + 1 %>.</td>
     <td><a href="<%= pattern.symbol %>.html"><%= pattern.name %></a></td>
     <td><%= pattern.category %></td>
-%   %w(story summary problem answer details credits).each do |field|
+%   columns[2..-2].each do |field|
 %     if pattern.send((field + "?").to_sym)
         <td class="pass"><%= pattern.send(field.to_sym).split.size%></td>
 %     else
